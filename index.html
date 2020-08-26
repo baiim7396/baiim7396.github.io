@@ -2,21 +2,6 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.post("https://faucetpay.io/api/v1/payouts",
-    {
-    api_key: "4a7f57490bc9bf898961c50f23cbe5abc04c3e98",
-    currency: "DOGE",
-    count: "100"
-              },
-    function(status){
-      alert("status " + status);
-    });
-  });
-});
-</script>
 </head>
 <body>
 <center>
@@ -33,6 +18,22 @@ $(document).ready(function(){
 
 </center>
 <button>Send an HTTP POST request to a page and get the result back</button>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("https://faucetpay.io/api/v1/payouts",
+    {
+    api_key: "4a7f57490bc9bf898961c50f23cbe5abc04c3e98",
+    currency: "DOGE",
+    count: "100"
+              },
+    function(status){
+      alert("status " + status);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
